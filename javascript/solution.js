@@ -1,11 +1,8 @@
 function fizzBuzz(start, end){
     // base case
     if(start == 0){
-
         console.log(end-start);
         return 0;
-        // do shit and console log result
-
     }
 
     // recursive case
