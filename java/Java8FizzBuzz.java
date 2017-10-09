@@ -16,7 +16,7 @@ public class Java8FizzBuzz {
 	 * Java 8 
 	 * */
 	public static void main(String[] args) {
-		IntStream.range(1,20).forEach(i -> {
+		IntStream.range(1,100).forEach(i -> {
 			String s  = "";
 			s = i % 3 == 0 ? "Fizz " : "";
 			s += i % 5 == 0 ? "Buzz " : "";
