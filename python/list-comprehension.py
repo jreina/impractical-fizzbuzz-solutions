@@ -1,0 +1,1 @@
+["{}: {}".format(x, ("Fizz" if x % 3 == 0 else "") + ("Buzz" if x % 5 == 0 else "")) for x in range(100)]
