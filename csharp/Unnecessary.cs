@@ -10,34 +10,35 @@ class Program
 
         foreach (var integer in integers)
         {
-            new Unnecessary(integer);
+            Unnecessary.GetFizzBuzz(integer);
         }
         Console.ReadLine();
     }
 }
 
-public class Unnecessary
+public static class Unnecessary
 {
-    
+
     private static int _number;
+
+    private static Func<int, int> CheckFizzBuzz = number => (number % 3 == 0 && number % 5 ==0) ? 0: number % 3 == 0 ? 1 : number % 5 == 0 ? 2 : -1;
     
-    Func<int, int> GetFizzBuzz = number => number % 3 == 0 ? 0 : number % 5 == 0 ? 1 : -1;
-    
-    public Unnecessary(int number)
+    public static void GetFizzBuzz(int number)
     {
         _number = number;
-        var fizzOrBuzzString = UnnecessaryDictionary()[GetFizzBuzz(_number)];
+        var fizzOrBuzzString = UnnecessaryDictionary()[CheckFizzBuzz(_number)];
 
         Console.WriteLine(fizzOrBuzzString);
     }
 
-    public Dictionary<int, string> UnnecessaryDictionary()
+    private static Dictionary<int, string> UnnecessaryDictionary()
     {
         return new Dictionary<int, string>
         {
             [-1] = _number.ToString(),
-            [0] = "Fizz",
-            [1] = "Buzz"
+            [0] = "FizzBuzz",
+            [1] = "Fizz",
+            [2] = "Buzz"
         };
     }
 }
