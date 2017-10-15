@@ -1,5 +1,5 @@
-# inefficient
-A solution to the FizzBuzz problem using an unnecessary d=Func and dictionary.
+# Unnecessary
+A solution to the FizzBuzz problem using an unnecessary Func and dictionary.
 
 ## Cons
  - Don't need Func.
